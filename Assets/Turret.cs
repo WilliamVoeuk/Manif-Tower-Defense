@@ -5,8 +5,9 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     [SerializeField] float _range;
-    [SerializeField] public Transform _target;
-    public Transform target;
+    [SerializeField] Transform _partToRotate;
+    [SerializeField] float _rotateSpeed;
+    Transform target;
     public string protestorTag = "Protestor";
 
     void Start()
@@ -43,8 +44,13 @@ public class Turret : MonoBehaviour
 
     void Update()
     {
-        //UpdateTarget();
-        transform.LookAt(_target);
+        if(target == null)
+        { return; }
+
+        Vector3 dir = target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
+        Vector3 rotation = Quaternion.Lerp(_partToRotate.rotation, lookRotation, Time.deltaTime * _rotateSpeed).eulerAngles;
+        _partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
     private void OnDrawGizmos()
     {
