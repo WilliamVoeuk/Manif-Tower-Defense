@@ -10,8 +10,6 @@ public class Shop : MonoBehaviour
     }
     public void BuyBasicTurret()
     {
-        Debug.Log("Basic Turret Selected");
-
         buildsManager.SetTurretToBuild(buildsManager._baseTurretPrefab);
     }
 }
