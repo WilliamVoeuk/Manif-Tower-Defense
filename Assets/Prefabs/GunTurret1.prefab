@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &750169952185838995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6826242881345332400}
+  m_Layer: 0
+  m_Name: BulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6826242881345332400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750169952185838995}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.13, y: 5.11, z: 3.13}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1704687096259351333}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1704687095916388272
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +233,7 @@ Transform:
   - {fileID: 1704687096064824483}
   - {fileID: 1704687095916388273}
   - {fileID: 1704687096602954833}
+  - {fileID: 6826242881345332400}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -240,6 +272,10 @@ MonoBehaviour:
   _range: 15
   _partToRotate: {fileID: 1704687096259351333}
   _rotateSpeed: 10
+  _fireRate: 4
+  _bulletPrefab: {fileID: 3822606003433104478, guid: 419e1728d34376640a60b1a0884fe507,
+    type: 3}
+  _bulletSpawn: {fileID: 6826242881345332400}
   protestorTag: Protestor
 --- !u!1 &1704687096382691338
 GameObject:

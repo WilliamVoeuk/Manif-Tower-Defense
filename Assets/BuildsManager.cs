@@ -17,20 +17,18 @@ public class BuildsManager : MonoBehaviour
         instance = this;
     }
     #endregion
-    [SerializeField] GameObject _baseTurretPrefab;
+    public GameObject _baseTurretPrefab;
     private GameObject _turretToBuild;
 
-    private void Start()
-    {
-        _turretToBuild = _baseTurretPrefab;
-    }
+
     public GameObject GetTurretToBuild()
     {
         return _turretToBuild;
     }
 
-    public void Hola()
+    public void SetTurretToBuild(GameObject turret)
     {
-        Debug.Log("hoya");
+        Debug.Log("Turret in setter");
+        _turretToBuild = turret;
     }
 }
