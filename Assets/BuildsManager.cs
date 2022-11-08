@@ -28,7 +28,6 @@ public class BuildsManager : MonoBehaviour
 
     public void SetTurretToBuild(GameObject turret)
     {
-        Debug.Log("Turret in setter");
         _turretToBuild = turret;
     }
 }

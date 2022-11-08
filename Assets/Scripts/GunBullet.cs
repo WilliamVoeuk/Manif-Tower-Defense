@@ -3,7 +3,7 @@ using UnityEngine;
 public class GunBullet : MonoBehaviour
 {
     [SerializeField] float _speed;
-    float _lifetime = 5f;
+    [SerializeField] float _lifetime;
     //[SerializeField] int _damage;
     private Transform _target;
 

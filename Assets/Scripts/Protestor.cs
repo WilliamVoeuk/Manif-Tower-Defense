@@ -6,10 +6,13 @@ public class Protestor : MonoBehaviour
     private Transform _target;
     int _pathpointIndex = 0;
 
+    private PlayerStats playerStats;
+
 
     private void Start()
     {
         _target = PathPoints.pathPoints[_pathpointIndex];
+        playerStats = PlayerStats.instance;
     }
     void Update()
     {
@@ -26,6 +29,7 @@ public class Protestor : MonoBehaviour
     {
         if( _pathpointIndex >= PathPoints.pathPoints.Length -1 )
         {
+            playerStats.HpLose(1);
             Destroy(gameObject);
             return;
 

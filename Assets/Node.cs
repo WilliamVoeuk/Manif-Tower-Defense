@@ -26,7 +26,6 @@ public class Node : MonoBehaviour
     {
         if(buildsManager.GetTurretToBuild() == null)
         {
-            Debug.Log("Pas de tourelle à construire");
             return;
         }
         if(_turret != null)
