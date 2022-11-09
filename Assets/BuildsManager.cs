@@ -21,7 +21,6 @@ public class BuildsManager : MonoBehaviour
     public GameObject _baseRocketPrefab;
     private GameObject _turretToBuild;
 
-
     public GameObject GetTurretToBuild()
     {
         return _turretToBuild;
@@ -29,6 +28,7 @@ public class BuildsManager : MonoBehaviour
 
     public void SetTurretToBuild(GameObject turret)
     {
+        Debug.Log(turret);
         _turretToBuild = turret;
     }
 }

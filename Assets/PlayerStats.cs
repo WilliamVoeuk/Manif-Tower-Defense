@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour
 {
     [SerializeField] int _playerBaseHP;
-    int playerHP;
+    public int playerHP;
     [SerializeField] TextMeshProUGUI _playerHPText;
     [SerializeField] int _playerBaseCurrency;
-    int playerCurrency;
+    public int playerCurrency;
     [SerializeField] TextMeshProUGUI _playerCurrencyText;
 
     public static PlayerStats instance;

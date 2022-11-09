@@ -11,11 +11,16 @@ public class Node : MonoBehaviour
     [Header("Build")]
     private GameObject _turret;
     private BuildsManager buildsManager;
+    private PlayerStats playerStats;
+
+    private int turretPrice = 100;
+
     private void Start()
     {
         _rend = GetComponent<Renderer>();
         _normalColor = _rend.material.color;
         buildsManager = BuildsManager.instance;
+        playerStats = PlayerStats.instance;
 
     }
     private void OnMouseEnter()
@@ -42,10 +47,14 @@ public class Node : MonoBehaviour
         {
             return;
         }
+        if(turretPrice <= playerStats.playerCurrency)
+        {
+            GameObject turrectToBuild = buildsManager.GetTurretToBuild();
+            Vector3 turretPosition = new(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+            _turret = (GameObject)Instantiate(turrectToBuild, turretPosition, transform.rotation);
+            playerStats.playerCurrency -= turretPrice;
+        }
 
-        GameObject turrectToBuild = buildsManager.GetTurretToBuild();
-        Vector3 turretPosition = new(transform.position.x, transform.position.y + 0.5f, transform.position.z); 
-        _turret = (GameObject)Instantiate(turrectToBuild, turretPosition, transform.rotation);
     }
 
     private void OnMouseExit()
