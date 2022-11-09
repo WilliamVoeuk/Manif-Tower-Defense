@@ -74,7 +74,7 @@ MonoBehaviour:
   _partToRotate: {fileID: 2661542709841712336}
   _rotateSpeed: 10
   _fireRate: 0.5
-  _bulletPrefab: {fileID: 3822606003433104478, guid: 419e1728d34376640a60b1a0884fe507,
+  _bulletPrefab: {fileID: 360898534804204393, guid: 325eac7fb1586a74e8c51bab319c0981,
     type: 3}
   _bulletSpawn: {fileID: 5729149402662870380}
   protestorTag: Protestor

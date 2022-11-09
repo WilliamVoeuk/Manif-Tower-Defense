@@ -69,7 +69,7 @@ public class Turret : MonoBehaviour
     private void Fire()
     {
         GameObject bulletPref = (GameObject)Instantiate(_bulletPrefab, _bulletSpawn.position, _bulletSpawn.rotation);
-        GunBullet bulletScript = bulletPref.GetComponent<GunBullet>();
+        Bullet bulletScript = bulletPref.GetComponent<Bullet>();
 
         if(bulletScript != null)
         {
