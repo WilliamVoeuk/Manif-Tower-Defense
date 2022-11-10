@@ -41,4 +41,8 @@ public class PlayerStats : MonoBehaviour
         playerHP -= Damage;
     }
 
+    public void GetMoney()
+    {
+        Debug.Log("Get Money bitch");
+    }
 }

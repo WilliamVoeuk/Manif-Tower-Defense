@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
 
     [SerializeField] float _speed;
     [SerializeField] float _lifetime;
+    [SerializeField] int _Dmg;
     public void Seek(Transform target)
     {
         _target = target;
@@ -25,6 +26,7 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        GameObject.Destroy(collision.gameObject);
+        Protestor protestor = collision.gameObject.GetComponent<Protestor>();
+        protestor.GetDMG(_Dmg);
     }
 }
