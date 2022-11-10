@@ -40,4 +40,9 @@ public class WaveSpawner : MonoBehaviour
         Instantiate(_protestorPrefab, _spawner.position, _spawner.rotation);
 
     }
+
+    public void LaunchWave()
+    {
+        _countDown = 0f;
+    }
 }
