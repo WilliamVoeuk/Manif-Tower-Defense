@@ -41,8 +41,8 @@ public class PlayerStats : MonoBehaviour
         playerHP -= Damage;
     }
 
-    public void GetMoney()
+    public void GetMoney(int money)
     {
-        Debug.Log("Get Money bitch");
+        playerCurrency += money;
     }
 }

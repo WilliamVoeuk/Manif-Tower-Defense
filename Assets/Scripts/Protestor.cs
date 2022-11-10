@@ -6,6 +6,7 @@ public class Protestor : MonoBehaviour
     private Transform _target;
     int _pathpointIndex = 0;
     [SerializeField] int _healthPoints;
+    [SerializeField] int _moneyReward;
 
     private PlayerStats playerStats;
 
@@ -32,7 +33,6 @@ public class Protestor : MonoBehaviour
         {
             playerStats.HpLose(1);
             Destroy(gameObject);
-            playerStats.GetMoney();
             return;
 
         }
@@ -47,6 +47,7 @@ public class Protestor : MonoBehaviour
         if( _healthPoints <= 0 )
         {
             GameObject.Destroy(gameObject);
+            playerStats.GetMoney(_moneyReward);
         }
     }
 
