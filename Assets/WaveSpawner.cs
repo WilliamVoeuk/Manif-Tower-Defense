@@ -33,8 +33,9 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
         _counter++;
+        PlayerStats.roundsSurvived++;
     }
-
+     
     void SpawnEnemies()
     {
         Instantiate(_protestorPrefab, _spawner.position, _spawner.rotation);

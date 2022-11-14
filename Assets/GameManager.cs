@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    bool gameEnded = false;
+    bool gameEnded;
 
     [SerializeField] GameObject _gameOverUI;
     // Update is called once per frame
+
+    private void Start()
+    {
+        gameEnded = false;
+    }
     void Update()
     {
         if (gameEnded)

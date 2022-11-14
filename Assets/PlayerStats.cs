@@ -7,10 +7,12 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] int _playerBaseHP;
     public static int playerHP;
     [SerializeField] TextMeshProUGUI _playerHPText;
+
     [SerializeField] int _playerBaseCurrency;
     public int playerCurrency;
     [SerializeField] TextMeshProUGUI _playerCurrencyText;
 
+    public static int roundsSurvived;
     public static PlayerStats instance;
 
     private void Awake()
@@ -23,8 +25,9 @@ public class PlayerStats : MonoBehaviour
     }
     private void Start()
     {
-        playerHP = _playerBaseHP;
+        playerHP = _playerBaseHP;   
         playerCurrency = _playerBaseCurrency;
+        roundsSurvived = 0;
     }
     private void Update()
     {

@@ -10683,7 +10683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8331c44354ed4f84b9dcf9683d6d6807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameOverUI: {fileID: 0}
+  _gameOverUI: {fileID: 1788268339}
 --- !u!1001 &869072855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19142,6 +19142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2338e243fa7c85148bbb757d82fcc0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roundText: {fileID: 1158688591}
 --- !u!1001 &1789508719
 PrefabInstance:
   m_ObjectHideFlags: 0
