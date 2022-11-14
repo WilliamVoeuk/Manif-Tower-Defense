@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour
 {
     [SerializeField] int _playerBaseHP;
-    public int playerHP;
+    public static int playerHP;
     [SerializeField] TextMeshProUGUI _playerHPText;
     [SerializeField] int _playerBaseCurrency;
     public int playerCurrency;
@@ -30,10 +30,10 @@ public class PlayerStats : MonoBehaviour
     {
         _playerHPText.text = playerHP.ToString();
         _playerCurrencyText.text = playerCurrency.ToString();  
-        if(playerHP <= 0)
+/*        if(playerHP <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        }*/
     }
 
     public void HpLose(int Damage)
