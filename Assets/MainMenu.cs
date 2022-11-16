@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -6,11 +7,12 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         Debug.Log("Start");
+        SceneManager.LoadScene("Level 1");
     }
 
     // Update is called once per frame
     public void Quit()
     {
-        Debug.Log("Cya");
+        Application.Quit();
     }
 }
