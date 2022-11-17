@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         Debug.Log("Start");
+        Time.timeScale = 1;
         SceneManager.LoadScene("Level 1");
     }
 
