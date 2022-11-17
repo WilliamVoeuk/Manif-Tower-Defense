@@ -273,7 +273,7 @@ MonoBehaviour:
   _range: 15
   _partToRotate: {fileID: 1704687096259351333}
   _rotateSpeed: 20
-  _fireRate: 2
+  _fireRate: 1
   _bulletPrefab: {fileID: 8530891135317232908, guid: 0318a5d4e9f35b3499c3a51e7e053320,
     type: 3}
   _bulletSpawn: {fileID: 6826242881345332400}
