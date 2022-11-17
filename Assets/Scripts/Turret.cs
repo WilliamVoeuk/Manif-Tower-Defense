@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Turret : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Turret : MonoBehaviour
     float _fireCD = 0f;
     [SerializeField] GameObject _bulletPrefab;
     [SerializeField] Transform _bulletSpawn;
+    //[SerializeField] UnityEvent _onFire;
+
     public string protestorTag = "Protestor";
 
 
@@ -65,12 +68,13 @@ public class Turret : MonoBehaviour
         }
         _fireCD -= Time.deltaTime;
     }
-    private void Fire()
+    public void Fire()
     {
         GameObject bulletPref = (GameObject)Instantiate(_bulletPrefab, _bulletSpawn.position, _bulletSpawn.rotation);
         Bullet bulletScript = bulletPref.GetComponent<Bullet>();
+        
 
-        if(bulletScript != null)
+        if (bulletScript != null)
         {
             bulletScript.Seek(target);
         }
