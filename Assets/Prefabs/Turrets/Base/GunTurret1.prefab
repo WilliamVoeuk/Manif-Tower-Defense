@@ -234,7 +234,6 @@ Transform:
   - {fileID: 1704687095916388273}
   - {fileID: 1704687096602954833}
   - {fileID: 6826242881345332400}
-  - {fileID: 5660306740387317409}
   - {fileID: 4546768210513001164}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -273,8 +272,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _range: 15
   _partToRotate: {fileID: 1704687096259351333}
-  _rotateSpeed: 10
-  _fireRate: 4
+  _rotateSpeed: 20
+  _fireRate: 2
   _bulletPrefab: {fileID: 8530891135317232908, guid: 0318a5d4e9f35b3499c3a51e7e053320,
     type: 3}
   _bulletSpawn: {fileID: 6826242881345332400}
@@ -394,37 +393,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &2968957428525653967
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5660306740387317409}
-  m_Layer: 0
-  m_Name: Fire Effect
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5660306740387317409
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2968957428525653967}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1704687096259351333}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5294700240810981315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -445,7 +413,7 @@ PrefabInstance:
     - target: {fileID: 8530891135317232911, guid: 0318a5d4e9f35b3499c3a51e7e053320,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8530891135317232911, guid: 0318a5d4e9f35b3499c3a51e7e053320,
         type: 3}
@@ -460,7 +428,7 @@ PrefabInstance:
     - target: {fileID: 8530891135317232911, guid: 0318a5d4e9f35b3499c3a51e7e053320,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.69
+      value: 3.31
       objectReference: {fileID: 0}
     - target: {fileID: 8530891135317232911, guid: 0318a5d4e9f35b3499c3a51e7e053320,
         type: 3}

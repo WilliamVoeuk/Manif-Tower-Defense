@@ -26,7 +26,11 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Touché");
         Protestor protestor = collision.gameObject.GetComponent<Protestor>();
-        protestor.GetDMG(_Dmg);
+        if (protestor != null)
+        { 
+            protestor.GetDMG(_Dmg);
+        }
     }
 }

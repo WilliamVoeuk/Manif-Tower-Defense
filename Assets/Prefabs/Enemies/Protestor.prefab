@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115cdbf3f24aeab41bb4fdea6c010392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
+  _speed: 5
   _healthPoints: 20
   _moneyReward: 10
 --- !u!114 &5805176851698104141

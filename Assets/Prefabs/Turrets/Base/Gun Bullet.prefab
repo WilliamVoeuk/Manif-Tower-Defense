@@ -237,6 +237,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8530891135317232911}
   - component: {fileID: 8122727325752438264}
+  - component: {fileID: 8353806944852934675}
+  - component: {fileID: 6578675930510701703}
   m_Layer: 0
   m_Name: Gun Bullet
   m_TagString: Untagged
@@ -252,8 +254,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8530891135317232908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.7314}
+  m_LocalScale: {x: 11.184602, y: 11.184602, z: 11.184602}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1269029971560030855}
@@ -273,6 +275,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e12d404b161b25642916fc7a6294f293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 70
+  _speed: 1000
   _lifetime: 3
   _Dmg: 5
+--- !u!136 &8353806944852934675
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8530891135317232908}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 1
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.33}
+--- !u!54 &6578675930510701703
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8530891135317232908}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
