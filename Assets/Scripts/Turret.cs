@@ -14,7 +14,7 @@ public class Turret : MonoBehaviour
     float _fireCD = 0f;
     [SerializeField] GameObject _bulletPrefab;
     [SerializeField] Transform _bulletSpawn;
-    //[SerializeField] UnityEvent _onFire;
+    [SerializeField] AudioSource _fireSound;
 
     public string protestorTag = "Protestor";
 
@@ -71,8 +71,7 @@ public class Turret : MonoBehaviour
     public void Fire()
     {
         GameObject bulletPref = (GameObject)Instantiate(_bulletPrefab, _bulletSpawn.position, _bulletSpawn.rotation);
-       // Bullet bulletScript = bulletPref.GetComponent<Bullet>();
-        
+        _fireSound.Play();
     }
     private void OnDrawGizmos()
     {
