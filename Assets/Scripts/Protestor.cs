@@ -43,7 +43,6 @@ public class Protestor : MonoBehaviour
     public void GetDMG(int dmg)
     {
         _healthPoints -= dmg;
-        Debug.Log("Get DMG");
         if( _healthPoints <= 0 )
         {
             GameObject.Destroy(gameObject);
