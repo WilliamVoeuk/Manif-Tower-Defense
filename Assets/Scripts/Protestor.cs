@@ -12,6 +12,9 @@ public class Protestor : MonoBehaviour
     [SerializeField] Slider Healthbar;
     private PlayerStats playerStats;
 
+    public AudioClip[] _dyingSounds;
+    [SerializeField] AudioSource _dyingSoundsource;
+
 
     private void Start()
     {
@@ -20,6 +23,9 @@ public class Protestor : MonoBehaviour
         Healthbar.value = _healthPoints;
         _target = PathPoints.pathPoints[_pathpointIndex];
         playerStats = PlayerStats.instance;
+
+        //_dyingSoundsource.clip = _dyingSounds[0];
+
     }
     void Update()
     {
@@ -45,13 +51,13 @@ public class Protestor : MonoBehaviour
         _pathpointIndex++;
         _target = PathPoints.pathPoints[_pathpointIndex];
     }
-
     public void GetDMG(int dmg)
     {
         _currentHealth -= dmg;
         Healthbar.value = (_currentHealth);
         if (_currentHealth <= 0 )
         {
+            _dyingSoundsource.Play();
             GameObject.Destroy(gameObject);
             playerStats.GetMoney(_moneyReward);
         }

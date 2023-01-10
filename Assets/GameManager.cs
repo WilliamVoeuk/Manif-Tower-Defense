@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     bool gameEnded;
 
     [SerializeField] GameObject _gameOverUI;
+    [SerializeField] AudioSource _gameoverSound;
     // Update is called once per frame
 
     private void Start()
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
     private void EndGame()
     {
         gameEnded = true;
+        _gameoverSound.Play();
         _gameOverUI.SetActive(true);
         Time.timeScale = 0; 
     }
