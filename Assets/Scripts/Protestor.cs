@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Protestor : MonoBehaviour
 {
@@ -6,13 +7,17 @@ public class Protestor : MonoBehaviour
     private Transform _target;
     int _pathpointIndex = 0;
     [SerializeField] int _healthPoints;
+    int _currentHealth;
     [SerializeField] int _moneyReward;
-
+    [SerializeField] Slider Healthbar;
     private PlayerStats playerStats;
 
 
     private void Start()
     {
+        _currentHealth = _healthPoints;
+        Healthbar.maxValue = _healthPoints;
+        Healthbar.value = _healthPoints;
         _target = PathPoints.pathPoints[_pathpointIndex];
         playerStats = PlayerStats.instance;
     }
@@ -26,6 +31,7 @@ public class Protestor : MonoBehaviour
             GetNextPoint();
 
         }
+
     }
     void GetNextPoint()
     {
@@ -42,8 +48,9 @@ public class Protestor : MonoBehaviour
 
     public void GetDMG(int dmg)
     {
-        _healthPoints -= dmg;
-        if( _healthPoints <= 0 )
+        _currentHealth -= dmg;
+        Healthbar.value = (_currentHealth);
+        if (_currentHealth <= 0 )
         {
             GameObject.Destroy(gameObject);
             playerStats.GetMoney(_moneyReward);
